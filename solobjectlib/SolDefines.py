@@ -48,6 +48,9 @@ SOL_TYPE_SENS_GS3_I1D4T4E4N1_2              = 0x35
 SOL_TYPE_SENS_LP02_R4N1                     = 0x36
 SOL_TYPE_SENS_ECTM                          = 0x37
 SOL_TYPE_SENS_MPS1                          = 0x38
+SOL_TYPE_ADXL362_FFT_Z                      = 0x39
+SOL_TYPE_ADXL362_FFT_Y                      = 0x40
+SOL_TYPE_ADXL362_FFT_X                      = 0x41
 
 def solTypeToTypeName(solDefinesClass,type_id):
     for n in dir(solDefinesClass):
@@ -409,4 +412,24 @@ sol_types = [
                 }
             ],
     },
+    {
+        'type':         SOL_TYPE_ADXL362_FFT_Z,
+        'description':  'Fourier Transfer of accelerometer Z readings',
+        'structure':    '<iiiiiiiiiii',
+        'fields':       ['config_1','config_2','freq_1','freq_2','freq_3','freq_4','freq_5','m_1','m_2','m_3','m_4','m_5'],
+    },
+    {
+        'type':         SOL_TYPE_ADXL362_FFT_Y,
+        'description':  'Fourier Transfer of accelerometer Y readings',
+        'structure':    '<iiiiiiiiiii',
+        'fields':       ['config_1','config_2','freq_1','freq_2','freq_3','freq_4','freq_5','m_1','m_2','m_3','m_4','m_5'],
+    },
+    {
+        'type':         SOL_TYPE_ADXL362_FFT_X,
+        'description':  'Fourier Transfer of accelerometer X readings',
+        'structure':    '<iiiiiiiiiii',
+        'fields':       ['config_1','config_2','freq_1','freq_2','freq_3','freq_4','freq_5','m_1','m_2','m_3','m_4','m_5'],
+    },
+    
+    
 ]
